@@ -42,14 +42,18 @@ import API from '@/api';
 import CategorySelect from '@/components/CategorySelect';
 //组件实例的原型的原型指向的是Vue.prototype
 //任意组件可以使用API相关的接口
-Vue.prototype.$API =API;
+Vue.prototype.$API = API;
 //注册全局组件
-Vue.component( CategorySelect.name, CategorySelect);
+Vue.component(CategorySelect.name, CategorySelect);
 import HintButton from '@/components/HintButton';
-Vue.component(HintButton.name,HintButton);
+Vue.component(HintButton.name, HintButton);
+
+//Mockjs
+import '@/mock/mockRequest';
 
 //引入v-charts配置文件
 import '@/plugins/vcharts';
+import { mock } from 'mockjs'
 new Vue({
   el: '#app',
   router,
