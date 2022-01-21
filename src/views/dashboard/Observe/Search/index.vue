@@ -27,7 +27,7 @@
         </el-col>
       </el-row>
       <!-- table表格 -->
-      <el-table :data="tableData" style="width: 100%" border>
+      <el-table :data="tableData" style="width: 100%;margin:30px 0" border>
         <el-table-column label="排名" width="80" type="index">
         </el-table-column>
         <el-table-column label="搜搜关键字" width="180"> </el-table-column>
@@ -35,24 +35,24 @@
         <el-table-column label="周涨幅" sortable> </el-table-column>
       </el-table>
       <!-- 分页去 -->
-      <el-pagination layout="prev, pager, next" :total="1000" class="pagination"> </el-pagination>
+      <el-pagination layout="prev, pager, next" :total="1000" class="pagination" style="margin-bottom:20px"> </el-pagination>
     </div>
   </el-card>
 </template>
 
 <script>
-import LineCharts from "./lineCharts";
+import LineCharts from './lineCharts'
 export default {
-  name: "",
+  name: '',
   data() {
     return {
-      tableData: [{}],
-    };
+      tableData: [{}]
+    }
   },
   components: {
-    LineCharts,
-  },
-};
+    LineCharts
+  }
+}
 </script>
 
 <style scoped>
@@ -64,7 +64,7 @@ export default {
   display: flex;
   justify-content: space-between;
 }
-.pagination{
+.pagination {
   float: right;
 }
 </style>

@@ -51,8 +51,8 @@ export const constantRoutes = [
     component: Layout,
     redirect: '/dashboard',
     children: [{
-      path: 'dashboard',
       name: 'Dashboard',
+      path: 'dashboard',
       component: () => import('@/views/dashboard/index'),
       meta: { title: '首页', icon: 'dashboard' }
     }]
@@ -164,7 +164,7 @@ export const asyncRoutes = [
 
 
 //任意路由：当路径出现错误的时候重定向404
-export const anyRoutes = { path: '*', redirect: '/404', hidden: true };
+export const anyRoutes = { path: '*', redirect: '/dashboard', hidden: true };
 
 
 //任意理由：
